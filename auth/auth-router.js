@@ -16,7 +16,7 @@ function register(req, res) {
   const newUser = {
     username: username,
     department: department,
-    password: hash,
+    password: hash
   };
 
   model
@@ -53,7 +53,7 @@ function login(req, res) {
 function generateToken(user) {
   const payload = {
     subject: user.id,
-    username: user.username,
+    username: user.username
     // roles: 'finance',
   };
   const options = {
