@@ -9,7 +9,7 @@ const router = express.Router();
 router.get("/users", restricted, showUsers);
 
 function showUsers(req, res) {
-  if (req.decodedToken) {
+  if (req.decodedToken.department.includes("department")) {
     model
       .getUsers()
       .then(users => {

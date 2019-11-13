@@ -53,8 +53,8 @@ function login(req, res) {
 function generateToken(user) {
   const payload = {
     subject: user.id,
-    username: user.username
-    // roles: 'finance',
+    username: user.username,
+    department: user.department,
   };
   const options = {
     expiresIn: "1d"
